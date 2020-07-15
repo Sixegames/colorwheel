@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scene/Line2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://images/color.png" type="Texture" id=2]
+[ext_resource path="res://scene/wheelpivot.gd" type="Script" id=3]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.0165975, 0.995851 )
+colors = PoolColorArray( 0.980469, 0.972809, 0.972809, 0, 0.992157, 0.992157, 0.992157, 1 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Line2D
+
+export (NodePath) var body_scene
+export var trail_length = 15
+var body
+func _ready():
+	body = get_node(body_scene)
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	global_rotation = 0
+	global_position = Vector2(0,0)
+	add_point(body.global_position )
+	while get_point_count() > trail_length:
+		remove_point(0)
+		
+		
+
+
+	pass
+"
+
+[node name="wheelpivot" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.19, 0.19 )
+texture = ExtResource( 2 )
+
+[node name="line" parent="." instance=ExtResource( 1 )]
+width = 25.0
+default_color = Color( 1, 1, 1, 1 )
+gradient = SubResource( 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = SubResource( 2 )
+body_scene = NodePath("..")
+trail_length = 10

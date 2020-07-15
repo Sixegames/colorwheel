@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Roboxel - Space Music.ogg-24b155bf5b0d8e99d56570a4858bc8ca.oggstr"
+
+[deps]
+
+source_file="res://audio/Roboxel - Space Music.ogg"
+dest_files=[ "res://.import/Roboxel - Space Music.ogg-24b155bf5b0d8e99d56570a4858bc8ca.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

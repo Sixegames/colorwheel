@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/zillion/Documents/Gamedev/wheels/android/build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml",
+            "map": [
+                {
+                    "source": "/Users/zillion/.gradle/caches/transforms-2/files-2.1/26b805162fc4fbddc24b0d569cb9fb61/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "0,0,0,0,0,0,0",
+                        "startOffsets": "199,282,416,481,548,638,757",
+                        "endColumns": "82,133,64,66,89,118,72",
+                        "endOffsets": "281,415,480,547,637,756,829"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "378,465,603,672,743,837,960",
+                        "endColumns": "86,137,68,70,93,122,76",
+                        "endOffsets": "460,598,667,738,832,955,1032"
+                    }
+                },
+                {
+                    "source": "/Users/zillion/.gradle/caches/transforms-2/files-2.1/c14406bc16b81cdb008e41604f022e25/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "196",
+                        "endOffsets": "443"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "196",
+                        "endOffsets": "297"
+                    }
+                },
+                {
+                    "source": "/Users/zillion/.gradle/caches/transforms-2/files-2.1/7c399a634a98bfc8a87f6ea465a91c4d/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "75",
+                        "endOffsets": "126"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "302",
+                        "endColumns": "75",
+                        "endOffsets": "373"
+                    }
+                },
+                {
+                    "source": "/Users/zillion/.gradle/caches/transforms-2/files-2.1/00feddb96b2703e51bd3a90f02f977e7/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "11",
+                        "startColumns": "4",
+                        "startOffsets": "1037",
+                        "endColumns": "100",
+                        "endOffsets": "1133"
+                    }
+                }
+            ]
+        }
+    ]
+}

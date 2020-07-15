@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/screaming_neon.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scene/miss.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("misslabel:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.9, 2.3 ),
+"transitions": PoolRealArray( 2, 0.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("misslabel:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9, 2.4 ),
+"transitions": PoolRealArray( 2, 0.5, 0.5 ),
+"update": 0,
+"values": [ Vector2( -44.755, -24.9796 ), Vector2( -76.755, -56.9796 ), Vector2( -44.755, -24.9796 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("misslabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="miss" type="Node2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 2 )
+
+[node name="misslabel" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -44.755
+margin_top = -24.9796
+margin_right = 43.245
+margin_bottom = 26.0204
+custom_fonts/font = SubResource( 1 )
+text = "miss"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="miss_anim" type="AnimationPlayer" parent="."]
+autoplay = "intro"
+playback_speed = 3.0
+anims/intro = SubResource( 2 )
+[connection signal="animation_finished" from="miss_anim" to="." method="_on_miss_anim_animation_finished"]

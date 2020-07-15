@@ -1,0 +1,173 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fonts/dealerplate california.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://images/buttondown.png" type="Texture" id=2]
+[ext_resource path="res://fonts/BigShouldersDisplay-Black.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("tap:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 0.5, 2 ),
+"update": 0,
+"values": [ Vector2( 197, 246 ), Vector2( 157, 222 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("tap:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 0.5, 2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.3, 1.3 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "New Anim"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("right:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.968627, 0.980392, 0.984314, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("doubletap:custom_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.3, 1.4, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.984314, 0.988235, 0.992157, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("left:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 0.8, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 1, 1, 1, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ), Color( 0.0117647, 0.439216, 0.647059, 1 ) ]
+}
+
+[node name="tapleft" type="Label"]
+margin_right = 560.0
+margin_bottom = 156.0
+custom_fonts/font = SubResource( 1 )
+text = "
+"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cameraline" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.0117647, 0.439216, 0.647059, 1 )
+position = Vector2( 385.293, 719.654 )
+scale = Vector2( 3.06692, 0.105612 )
+z_index = -2
+texture = ExtResource( 2 )
+
+[node name="left" type="Label" parent="."]
+margin_left = 220.979
+margin_top = 572.138
+margin_right = 529.979
+margin_bottom = 728.138
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0117647, 0.439216, 0.647059, 1 )
+text = "left {rotate left}"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="right" type="Label" parent="."]
+margin_left = 209.516
+margin_top = 508.402
+margin_right = 536.516
+margin_bottom = 664.402
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0117647, 0.439216, 0.647059, 1 )
+text = "right{rotate right}"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="doubletap" type="Label" parent="."]
+margin_left = 167.0
+margin_top = 877.0
+margin_right = 521.0
+margin_bottom = 1033.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0117647, 0.439216, 0.647059, 1 )
+text = "Doubletap{increase speed}"
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="tap" type="Label" parent="."]
+margin_left = 179.083
+margin_top = 235.25
+margin_right = 507.083
+margin_bottom = 475.25
+rect_scale = Vector2( 1.13438, 1.13438 )
+custom_fonts/font = SubResource( 2 )
+text = "Tap "
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 3 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+autoplay = "New Anim"
+playback_speed = 0.3
+"anims/New Anim" = SubResource( 4 )
